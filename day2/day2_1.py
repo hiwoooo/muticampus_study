@@ -5,7 +5,7 @@ arr=[]
 for i in range (T):
   N,M,L=map(int,input().split())
   arr=list(map(int, input().split()))
-  #print(arr)
+
   for _ in range(M):
     pos,data=map(int,input().split())
     arr.insert(pos,data)

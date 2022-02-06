@@ -21,7 +21,7 @@ def slicing(arr):
     cnt=0
     for i in range(0,9-3+1,3):
         for j in range(0,9-3+1,3):
-            arr=list(row [j:j+3] for row in sdk[i:i+3])
+            arr=list(row [j:j+3] for row in arr[i:i+3])
             if len(set(sum(arr, [])))==9:
                 cnt+=1
     if cnt==9: return 1

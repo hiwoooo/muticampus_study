@@ -10,9 +10,12 @@ def score_sort(score):
 
 T=int(input())
 for t in range(1,T+1):
+    # 학생수 N명, K번째 학생의 성적
     N,K=map(int,input().split())
     grade=['A+','A0','A-','B+','B0','B-','C+','C0','C-','D0']
     score=[]
+
+    #학생의 총점 
     for n in range(N):
         mid,fin,hw=map(int, input().split())
         score.append(0.35*mid+0.45*fin+0.2*hw)

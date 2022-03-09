@@ -2,6 +2,13 @@
 
 T=int(input())
 for t in range(1,T+1):
-    input_word=input()
+    deco='.#.'
+    deco=deco.join(input())
+    deco=deco.join(('#.','.#'))
 
-    
+    print('..#.'*(len(deco)//4), end='.\n')
+    print('.#'*(len(deco)//2), end='.\n')    
+    print(deco)
+    print('.#'*(len(deco)//2), end='.\n')
+    print('..#.'*(len(deco)//4), end='.\n')
+

@@ -29,4 +29,20 @@ for t in range(T):
     p,q=map(int, input().split())
 
     print(f'#{t+1} {PstarQ(p,q)}')
+# 런타임에러
+
+#1493. 수의 새로운 연산
+def XcommaY(x,y):
+  return x+(x+y-2)*(x+y-1)//2
+
+def PstarQ(p,q):
+  A=[(x,y) for x in range(1,73) for y in range(1,73) if x+(x+y-2)*(x+y-1)//2==p][0]
+  B=[(x,y) for x in range(1,73) for y in range(1,73) if x+(x+y-2)*(x+y-1)//2==q][0]
+  AB=[A[i]+B[i] for i in range(len(A))]
+  return XcommaY(AB[0],AB[1])
+
+T=int(input())
+for t in range(T):
+  p,q=map(int, input().split())
+  print(f'#{t+1} {PstarQ(p,q)}')
 

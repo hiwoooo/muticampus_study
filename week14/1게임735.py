@@ -3,8 +3,10 @@
 T=int(input())
 for t in range(T):
     arr=list(map(int,input().split()))
-    arr.sort(reverse=True)
+    arr_sum=[]
+    for i in range(7):
+        for j in range(i+1,7):
+            for k in range(j+1,7):
+                arr_sum.append(arr[i]+arr[j]+arr[k])
 
-    max_5th=arr[0]+arr[1]+arr[-1]
-
-    print(f'#{t+1} {max_5th}')
+    print(f'#{t+1} {sorted(set(arr_sum),reverse=True)[4]}')

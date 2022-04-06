@@ -2,13 +2,32 @@
 
 #B가 누르는동안 O가 미리 이동 가능
 
+def robot(B_loc,O_loc,test_time=0):
+    if arr[0]=='B':
+        if arr[1]>B_loc:
+            B_loc=arr[1]
+            test_time=arr[1]-B_loc+1   
+        elif arr[1]<B_loc:
+            B_loc=arr[1]
+            test_time=B_loc-arr[1]+1
+        else : 
+            arr.pop(0)
+            arr.pop(0)
+
+
+    if arr[0]=='O':
+        if arr[1]>O_loc:
+            O_loc=arr[1]
+            test_time=arr[1]-O_loc+1   
+        elif arr[1]<O_loc:
+            O_loc=arr[1]
+            test_time=O_loc-arr[1]+1
+        else : 
+            arr.pop(0)
+            arr.pop(0)
 
 T=int(input())
 for t in range(T):
     arr=list(map(int,input().split()))
     
-    test_time=0
-    
-    for i in range(1,len(arr)-2):
-        if arr[i]=='B':
-            test_time+=arr[i+1]
+

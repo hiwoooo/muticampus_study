@@ -13,8 +13,11 @@ def robot(B_loc,O_loc,test_time=0):
         else : 
             arr.pop(0)
             arr.pop(0)
-
-
+        
+        if O_loc!=1:
+            if O_loc>1:
+                O_loc
+        
     if arr[0]=='O':
         if arr[1]>O_loc:
             O_loc=arr[1]

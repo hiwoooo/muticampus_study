@@ -1,28 +1,25 @@
 #1860. 진기의 최고급 붕어빵
 
-def sale_bread(M,K):
-    global N_list,m
-    bread=(N_list[0]//m)*K
-    if M>N_list[0]:
-        return 0
-    elif len(N_list)<=bread :
-        return 1 
-    else :
-        while bread:
-            N_list.pop(0)
-            bread-=1
-        return sale_bread(M+M,K)
+def sale_bread(M,K,customer): 
+    cnt=0
+    while customer:
+        bread=(customer[0]//M)*K-cnt
+        if bread<1:
+            return "Impossible"
+        else: 
+            cnt+=1
+            customer.pop(0)
+    return "Possible"
+
 
 T=int(input())
 for t in range(T):
     N,M,K=map(int, input().split())
-    N_list=sorted(list(map(int,input().split())))
-    m=M
+    customer=sorted(list(map(int,input().split())))
     
-    if sale_bread(M,K)==1:
-        print(f'#{t+1} Possible')
-    else : print(f'#{t+1} Impossible')
+    result=sale_bread(M,K,customer)
 
-# 999/1000 ....
+    print(f'#{t+1} {result}')
+
 
         

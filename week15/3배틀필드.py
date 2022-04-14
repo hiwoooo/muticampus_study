@@ -16,6 +16,7 @@
 # S	Shoot : 전차가 현재 바라보고 있는 방향으로 포탄을 발사한다.
 
 
+
 T=int(input())
 for t in range(T):
     H,W=map(int, input().split())
@@ -23,4 +24,7 @@ for t in range(T):
     N=int(input())
     act_list=list(input())
 
+    for i in range(H):
+        for j in range(W):
+            
     

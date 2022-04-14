@@ -3,7 +3,7 @@
 def sale_bread(M,K,customer): 
     cnt=0
     while customer:
-        bread=(customer[0]//M)*K-cnt
+        bread=(customer[0]//M)*K-cnt #손님수만큼 빼고 난 후의 붕어빵
         if bread<1:
             return "Impossible"
         else: 
